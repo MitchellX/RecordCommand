@@ -28,3 +28,9 @@ this repository is used to display image file on the remote server for client
 git强制覆盖本地命令（单条执行）：
 
     git fetch --all && git reset --hard origin/master && git pull
+
+
+## git 删除远程分支上的某次提交
+    git revert HEAD
+    git push origin master
+    删除最后一次提交，但是查看git log 会有记录
