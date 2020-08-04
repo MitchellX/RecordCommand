@@ -21,7 +21,4 @@ git push -u origin master   （注：此操作目的是把本地仓库push到git
 git pull --rebase origin master   把最新的远程库同步到本地库
 
 ## delete:
-git stash
-
-git rm -r --cached
-
+git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
