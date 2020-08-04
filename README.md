@@ -38,5 +38,4 @@ git强制覆盖本地命令（单条执行）：
     删除最后一次提交，但是查看git log 会有记录
     
 # Common Command
-file/ folder rename:
-    mv A B
+    mv A B      file/ folder rename
