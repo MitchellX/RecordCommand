@@ -22,3 +22,15 @@ git pull --rebase origin master   把最新的远程库同步到本地库
 
 ## delete:
 git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
+
+## git强制覆盖：
+    git fetch --all
+    
+    git reset --hard origin/master
+    
+    git pull
+ 
+
+git强制覆盖本地命令（单条执行）：
+
+    git fetch --all && git reset --hard origin/master && git pull
