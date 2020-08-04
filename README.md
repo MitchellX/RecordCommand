@@ -20,3 +20,8 @@ git push -u origin master   （注：此操作目的是把本地仓库push到git
 ## update:
 git pull --rebase origin master   把最新的远程库同步到本地库
 
+## delete:
+git stash
+
+git rm -r --cached
+
