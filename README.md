@@ -2,11 +2,12 @@
 this repository is used to display image file on the remote server for client
 
 ## download：
+    git clone https://github.com/MitchellX/testImage.git
+    
+无用的：
     mkdir yourFileName
     cd /yourFileName
     git init
-
-    git clone https://github.com/MitchellX/testImage.git
 
 ## upload：
     git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来
