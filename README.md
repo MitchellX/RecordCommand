@@ -17,3 +17,6 @@ git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要
 
 git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
 
+## update:
+git pull --rebase origin master   把最新的远程库同步到本地库
+
