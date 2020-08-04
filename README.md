@@ -2,26 +2,25 @@
 this repository is used to display image file on the remote server for client
 
 ## download：
-mkdir yourFileName
+    mkdir yourFileName
 
-cd /yourFileName
+    cd /yourFileName
 
-git init
+    git init
 
-git clone https://github.com/MitchellX/testImage.git
+    git clone https://github.com/MitchellX/testImage.git
 
 ## upload：
-git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
+    git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
 
-git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
-
-git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
+    git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
+    git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
 
 ## update:
-git pull --rebase origin master   把最新的远程库同步到本地库
+    git pull --rebase origin master   把最新的远程库同步到本地库
 
 ## delete:
-git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
+    git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
 
 ## git强制覆盖：
     git fetch --all
