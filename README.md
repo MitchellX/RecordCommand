@@ -1,6 +1,8 @@
 # testImage
 this repository is used to display image file on the remote server for client
 
+# Git Command
+
 ## download：
     git clone https://github.com/MitchellX/testImage.git
     
