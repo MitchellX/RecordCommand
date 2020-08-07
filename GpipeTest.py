@@ -103,6 +103,8 @@ for epoch in range(2):  # loop over the dataset multiple times
         # get the inputs; data is a list of [inputs, labels]
         inputs, labels = data
         optimizer.zero_grad()
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        inputs = inputs.to(device)
 
         outputs = net(inputs)
         loss = criterion(outputs, labels)
