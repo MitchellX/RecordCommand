@@ -98,13 +98,15 @@ optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 # Train the network
 for epoch in range(2):  # loop over the dataset multiple times
     running_loss = 0.0
+    device0 = torch.device("cuda:0")
+    device1 = torch.device("cuda:1")
     for i, data in enumerate(trainloader, start=0):
         # print(i, data)
         # get the inputs; data is a list of [inputs, labels]
         inputs, labels = data
         optimizer.zero_grad()
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        inputs = inputs.to(device)
+        inputs = inputs.to(device0)
+        labels = labels.to(device1)
 
         outputs = net(inputs)
         loss = criterion(outputs, labels)
@@ -147,6 +149,10 @@ total = 0
 with torch.no_grad():
     for data in testloader:
         images, labels = data
+        
+        images = images.to(device0)
+        labels = labels.to(device1)
+
         outputs = net(images)
         _, predicted = torch.max(outputs.data, 1)
         total += labels.size(0)
