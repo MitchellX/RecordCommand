@@ -1,4 +1,4 @@
-from torchgpipe import GPipe
+import time
 import torch
 import torchvision
 import torch.nn as nn
@@ -89,7 +89,8 @@ net = GPipe(model, balance=[6, 6], chunks=2)
 print(len(net))
 print('this is the end of defining model')
 
-
+print("time starts")
+starttime = time.time()
 
 # Define a Loss function and optimizer
 criterion = nn.CrossEntropyLoss()
@@ -147,6 +148,7 @@ print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
 correct = 0
 total = 0
 # we don't need to calculate the gradient inference
+
 with torch.no_grad():
     for data in testloader:
         images, labels = data
