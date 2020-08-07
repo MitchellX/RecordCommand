@@ -12,21 +12,30 @@ from torchgpipe import GPipe
 from typing import cast
 
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"   # OMP error ->put these two lines
-PATH = 'E:\Python-project\cifar_net.pth'    # save model in this path
+PATH = './cifar_net.pth'    # save model in this path
+
+class View(nn.Module):
+    def __init__(self):
+        super(View, self).__init__()
+
+    def forward(self, x):
+        return x.view(x.size()[0], -1)
+
+
 
 transform = transforms.Compose([transforms.ToTensor(),
                                transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))])
 
-trainset = torchvision.datasets.CIFAR10(root='.data', train=True, download=True, transform=transform)
+trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=False, transform=transform)
 # print(trainset)
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=1,
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
                                           shuffle=True, num_workers=0)
 # If running on Windows and you get a BrokenPipeError, try setting
 # the num_worker of torch.utils.data.DataLoader() to 0.
 
-testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
+testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=False, transform=transform)
 # print(trainset)
-testloader = torch.utils.data.DataLoader(trainset, batch_size=1,
+testloader = torch.utils.data.DataLoader(trainset, batch_size=4,
                                           shuffle=True, num_workers=0)
 
 classes = ('plane', 'car', 'bird', 'cat',
@@ -52,15 +61,14 @@ dataiter = iter(trainloader)
 images, labels = dataiter.next()
 
 # 显示图片
-imshow(torchvision.utils.make_grid(images))
+# imshow(torchvision.utils.make_grid(images))
 # 打印图片标签
-print(' '.join('%5s' % classes[labels[j]] for j in range(1)))
+print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
-print("let's begin!")
+print("let's begin to define the model!")
+
 
 # Define a Convolutional Neural Network
-
-
 model = nn.Sequential(
          nn.Conv2d(3, 6, 5),
          nn.ReLU(inplace=True),
@@ -68,16 +76,18 @@ model = nn.Sequential(
          nn.Conv2d(6, 16, 5),
          nn.ReLU(inplace=True),
          nn.MaxPool2d(2, 2),
+         View(),
          nn.Linear(16*5*5, 120),
          nn.ReLU(inplace=True),
          nn.Linear(120, 84),
          nn.ReLU(inplace=True),
          nn.Linear(84, 10)
-)
-# init
-net = GPipe(model, balance=[5, 6], chunks=2)
+        )
 
-print('this is the end')
+# init
+net = GPipe(model, balance=[6, 6], chunks=2)
+print(len(net))
+print('this is the end of defining model')
 
 
 
@@ -107,16 +117,16 @@ for epoch in range(2):  # loop over the dataset multiple times
             running_loss = 0.0
 print("Finished Training")
 
-# torch.save(net.state_dict(), PATH)
+torch.save(net.state_dict(), PATH)
 
 
-'''
+
 # Test the network on the test data
 dataiter = iter(testloader)
 images, labels = dataiter.next()
 
 # print images
-imshow(torchvision.utils.make_grid(images))
+# imshow(torchvision.utils.make_grid(images))
 print('GroundTrue:', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 
@@ -142,7 +152,7 @@ with torch.no_grad():
 
     print('Accuracy of the network on the 10000 test images: %d %%' % (
             100 * correct / total))
-'''
+
 
 
 
