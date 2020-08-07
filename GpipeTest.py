@@ -128,6 +128,7 @@ torch.save(net.state_dict(), PATH)
 # Test the network on the test data
 dataiter = iter(testloader)
 images, labels = dataiter.next()
+images = images.to(device0)
 
 # print images
 # imshow(torchvision.utils.make_grid(images))
@@ -149,9 +150,7 @@ total = 0
 with torch.no_grad():
     for data in testloader:
         images, labels = data
-        
         images = images.to(device0)
-        labels = labels.to(device1)
 
         outputs = net(images)
         _, predicted = torch.max(outputs.data, 1)
