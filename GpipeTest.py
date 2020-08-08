@@ -153,6 +153,7 @@ with torch.no_grad():
     for data in testloader:
         images, labels = data
         images = images.to(device0)
+        labels = labels.to(device1)
 
         outputs = net(images)
         _, predicted = torch.max(outputs.data, 1)
