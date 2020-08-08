@@ -28,15 +28,15 @@ transform = transforms.Compose([transforms.ToTensor(),
 
 trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=False, transform=transform)
 # print(trainset)
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
-                                          shuffle=True, num_workers=0)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=40,
+                                          shuffle=True, num_workers=2)
 # If running on Windows and you get a BrokenPipeError, try setting
 # the num_worker of torch.utils.data.DataLoader() to 0.
 
 testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=False, transform=transform)
 # print(trainset)
-testloader = torch.utils.data.DataLoader(trainset, batch_size=4,
-                                          shuffle=True, num_workers=0)
+testloader = torch.utils.data.DataLoader(trainset, batch_size=40,
+                                          shuffle=True, num_workers=2)
 
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
@@ -121,6 +121,8 @@ for epoch in range(2):  # loop over the dataset multiple times
                   (epoch+1, i+1, running_loss/2000))
             running_loss = 0.0
 print("Finished Training")
+endtime1 = time.time()
+print("training time: %d" % (endtime1 - starttime))
 
 torch.save(net.state_dict(), PATH)
 
@@ -162,6 +164,9 @@ with torch.no_grad():
 
     print('Accuracy of the network on the 10000 test images: %d %%' % (
             100 * correct / total))
+
+endtime2 = time.time()
+print("predict time: %d" % (endtime2 - starttime))
 
 
 
