@@ -37,5 +37,11 @@ git强制覆盖本地命令（单条执行）：
     git push origin master
     删除最后一次提交，但是查看git log 会有记录
     
-# Common Command
-    mv A B      file/ folder rename
+# Linux Common Command
+    mv A B      file/ folder rename文件重命名
+    ctrl + z    退出当前进程
+https://blog.csdn.net/u011630575/article/details/48288663
+    fg          回到上一个进程
+    bg          将一个在后台暂停的命令，变成继续执行。如果后台中有多个命令，可以用bg %jobnumber将选中的命令调出
+    jobs -l     查看当前所有进程，并显示pid
+    kill pid    杀死pid进程
