@@ -4,4 +4,4 @@
 
 ![](./unet.jpg)  
 
-![](./data/test/0.png)  ![](./data/test/0_res.png)  
+![](./data/test/0.png)  ![](./data/test/0_res_res.png)  
