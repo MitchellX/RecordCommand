@@ -16,16 +16,13 @@ this repository is used to display image file on the remote server for client
     git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
     git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
 
-## update:
-    git pull --rebase origin master   把最新的远程库同步到本地库
-
-## delete:
-    git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
-
-## git强制覆盖：
+## update--(git强制覆盖)：
     git fetch --all
     git reset --hard origin/master
     git pull
+
+## delete:
+    git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
 
 git强制覆盖本地命令（单条执行）：
 
