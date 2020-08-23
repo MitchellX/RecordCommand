@@ -43,3 +43,11 @@ https://blog.csdn.net/u011630575/article/details/48288663
     bg          将一个在后台暂停的命令，变成继续执行。如果后台中有多个命令，可以用bg %jobnumber将选中的命令调出
     jobs -l     查看当前所有进程，并显示pid
     kill pid    杀死pid进程
+    
+## 监控GPU使用情况
+    gpustat     最简单的
+    watch -n 0.1 nvidia-smi   实时监控 -n设置间隔
+    
+## 释放GPU一直占用的显存
+    fuser -v /dev/nvidia*   查看当前系统中GPU占用的线程
+    kill -9 pid             结束进程
