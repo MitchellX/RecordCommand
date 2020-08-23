@@ -52,3 +52,6 @@ https://blog.csdn.net/u011630575/article/details/48288663
     fuser -v /dev/nvidia*   查看当前系统中GPU占用的线程
     nvidia-smi              也能查看pid
     kill -9 pid             结束进程
+## pytorch查看tensor大小
+    import sys
+    sys.getsizeof(input.storage())      单位byte B
