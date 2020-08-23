@@ -50,4 +50,5 @@ https://blog.csdn.net/u011630575/article/details/48288663
     
 ## 释放GPU一直占用的显存
     fuser -v /dev/nvidia*   查看当前系统中GPU占用的线程
+    nvidia-smi              也能查看pid
     kill -9 pid             结束进程
