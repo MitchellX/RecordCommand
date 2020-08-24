@@ -55,3 +55,15 @@ https://blog.csdn.net/u011630575/article/details/48288663
 ## pytorch查看tensor大小
     import sys
     sys.getsizeof(input.storage())      单位byte B
+    
+## pytorch查看Net model详情
+    print('model.__len__(): %d layers' % model.__len__())
+    print(f'model.__len__(): {model.__len__()} layers')
+
+    # U-net(5, 64) memory usage
+    param_count = sum(p.storage().size() for p in model.parameters())
+    param_size = sum(p.storage().size() * p.storage().element_size() for p in model.parameters())
+    param_scale = 2  # param + grad
+
+    print(f'# of Model Parameters: {param_count:,}')
+    print(f'Total Model Parameter Memory: {param_size * param_scale:,} Bytes')
