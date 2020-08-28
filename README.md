@@ -73,6 +73,5 @@ https://blog.csdn.net/u011630575/article/details/48288663
     class View(nn.Module):
     def __init__(self):
         super(View, self).__init__()
-
     def forward(self, x):
         return x.view(x.size()[0], -1)
