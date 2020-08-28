@@ -67,3 +67,12 @@ https://blog.csdn.net/u011630575/article/details/48288663
 
     print(f'# of Model Parameters: {param_count:,}')
     print(f'Total Model Parameter Memory: {param_size * param_scale:,} Bytes')
+    
+## View继承nn.Module，这样即可放入nn.Sequential()中了
+在接入全连接层前，一般都需要一个打平的操作放在nn.Sequential里面，因此需要自己写一个打平的类继承自nn.Module.以上便是代码，特记录之。
+    class View(nn.Module):
+    def __init__(self):
+        super(View, self).__init__()
+
+    def forward(self, x):
+        return x.view(x.size()[0], -1)
