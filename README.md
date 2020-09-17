@@ -78,15 +78,15 @@ https://blog.csdn.net/u011630575/article/details/48288663
         return x.view(x.size[0], -1)
         
 ## Conda环境复制的方法
-
 前提是，在本地的conda里已经有一个叫AAA的环境，我想创建一个新环境跟它一模一样的叫BBB，那么这样一句就搞定了：
-    conda create -n BBB --clone AAA
 
+    conda create -n BBB --clone AAA
 但是如果是跨计算机呢。查询conda create命令的原来说明，是这样的：
+
     –clone ENV
-    Path to (or name of) existing local environment.
-    
+    Path to (or name of) existing local environment.    
 –clone这个参数后面的不仅可以是环境的名字，也可以是环境的路径。所以，很自然地，我们可以把原来电脑上目标conda环境的目录复制到新电脑上，然后再用：
+
     conda create -n BBB --clone ~/path
 
 
