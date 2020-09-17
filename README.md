@@ -88,7 +88,7 @@ https://blog.csdn.net/u011630575/article/details/48288663
 –clone这个参数后面的不仅可以是环境的名字，也可以是环境的路径。所以，很自然地，我们可以把原来电脑上目标conda环境的目录复制到新电脑上，然后再用：
 
     conda create -n BBB --clone ~/path
-
+参考：https://blog.csdn.net/qq_38262728/article/details/88744268
 
 
 
