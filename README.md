@@ -79,8 +79,9 @@ https://blog.csdn.net/u011630575/article/details/48288663
         
 ## Conda环境复制的方法
 前提是，在本地的conda里已经有一个叫AAA的环境，我想创建一个新环境跟它一模一样的叫BBB，那么这样一句就搞定了：
-
+    
     conda create -n BBB --clone AAA
+    conda create -n your_env_name python=X.X（2.7、3.6等)   # Conda 创建虚拟环境
 但是如果是跨计算机呢。查询conda create命令的原来说明，是这样的：
 
     –clone ENV
