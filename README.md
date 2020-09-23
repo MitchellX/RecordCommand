@@ -82,6 +82,7 @@ https://blog.csdn.net/u011630575/article/details/48288663
     
     conda create -n BBB --clone AAA
     conda create -n your_env_name python=X.X（2.7、3.6等)   # Conda 创建虚拟环境
+    conda remove -n your_env_name(虚拟环境名称) --all       #  删除虚拟环境
 但是如果是跨计算机呢。查询conda create命令的原来说明，是这样的：
 
     –clone ENV
