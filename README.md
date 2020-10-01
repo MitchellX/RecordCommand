@@ -20,6 +20,14 @@ this repository is used to display image file on the remote server for client
     git fetch --all
     git reset --hard origin/master
     git pull
+    
+然后有两种方法来把你的代码和远程仓库中的代码合并
+
+-a. git pull这样就直接把你本地仓库中的代码进行更新但问题是可能会有冲突(conflicts)，个人不推荐
+
+-b. 先git fetch origin（把远程仓库中origin最新代码取回），再git merge origin/master（把本地代码和已取得的远程仓库最新代码合并），如果你的改动和远程仓库中最新代码有冲突，会提示，再去一个一个解决冲突，最后再从1开始
+
+如果没有冲突，git push origin master，把你的改动推送到远程仓库中
 
 ## delete:
     git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
