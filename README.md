@@ -101,4 +101,16 @@ https://blog.csdn.net/u011630575/article/details/48288663
 参考：https://blog.csdn.net/qq_38262728/article/details/88744268
 
 
+## make cmake 装完包记得 更新一下
+    sudo make install
+
+## sudo apt-get install 包之前记得更新源
+    sudo apt-get update
+
+
+## 改变环境变量。要立即生效的话，记得source ~/.bashrc
+    export PYTHONPATH=$PYTHONPATH:~/你的环境位置
+    export PYTHONPATH=$PYTHONPATH:/home/xiangmingcan/notespace/deepfakes/faceswapNirkin/face_swap/interfaces/python
+
+
 
