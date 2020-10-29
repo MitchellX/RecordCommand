@@ -101,6 +101,9 @@ https://blog.csdn.net/u011630575/article/details/48288663
 参考：https://blog.csdn.net/qq_38262728/article/details/88744268
 
 
+# 2020-10-22 开始记录京东的笔记
+
+
 ## make cmake 装完包记得 更新一下
     sudo make install
 
