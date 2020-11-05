@@ -1,5 +1,5 @@
 # testImage
-this repository is used to display image file on the remote server for client
+this repository aims to record some frequently-used command, including Linux and python commands.
 
 # Git Command
 
@@ -115,5 +115,16 @@ https://blog.csdn.net/u011630575/article/details/48288663
     export PYTHONPATH=$PYTHONPATH:~/你的环境位置
     export PYTHONPATH=$PYTHONPATH:/home/xiangmingcan/notespace/deepfakes/faceswapNirkin/face_swap/interfaces/python
 
+## 从YouTube下载视频
+    pip3 install youtube-dl
 
+    source_url = 'https://www.youtube.com/watch?v=5-s3ANu4eMs' #@param {type:"string"}
+    source_start = '00:01:40' #@param {type:"string"}
+    source_end = '00:01:50' #@param {type:"string"}
+
+    !mkdir -p /content/data
+    !rm -dr /content/data/source*
+    !youtube-dl $source_url --merge-output-format mp4 -o /content/data/source_tmp.mp4
+    !ffmpeg -y -i /content/data/source_tmp.mp4 -ss $source_start -to $source_end -r 25 /content/data/source.mp4
+    !rm /content/data/source_tmp.mp4
 
