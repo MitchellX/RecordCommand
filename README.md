@@ -119,6 +119,8 @@ https://blog.csdn.net/u011630575/article/details/48288663
     pip3 install youtube-dl
 
     source_url = 'https://www.youtube.com/watch?v=5-s3ANu4eMs' #@param {type:"string"}
+    
+    # (start, end) 剪取指定时长
     source_start = '00:01:40' #@param {type:"string"}
     source_end = '00:01:50' #@param {type:"string"}
 
