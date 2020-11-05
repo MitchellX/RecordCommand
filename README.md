@@ -116,7 +116,7 @@ https://blog.csdn.net/u011630575/article/details/48288663
     export PYTHONPATH=$PYTHONPATH:/home/xiangmingcan/notespace/deepfakes/faceswapNirkin/face_swap/interfaces/python
 
 ## 从YouTube下载视频
-    pip3 install youtube-dl
+    !pip3 install youtube-dl ffmpeg-python
 
     source_url = 'https://www.youtube.com/watch?v=5-s3ANu4eMs' #@param {type:"string"}
     
@@ -130,16 +130,8 @@ https://blog.csdn.net/u011630575/article/details/48288663
     !ffmpeg -y -i /content/data/source_tmp.mp4 -ss $source_start -to $source_end -r 25 /content/data/source.mp4
     !rm /content/data/source_tmp.mp4
    
-Taylor Swift videos
-
-    !pip3 install youtube-dl ffmpeg-python
+Taylor Swift videos:
 
     source_url = 'https://www.youtube.com/watch?v=JgkCFCOAn48'
-    # (start, end) 剪取指定时长
     source_start = '00:00:08' #@param {type:"string"}
     source_end = '00:00:25' #@param {type:"string"}
-
-    !mkdir -p ~/videos
-    !youtube-dl $source_url --merge-output-format mp4 -o ~/videos/source_tmp.mp4
-    !ffmpeg -y -i /videos/source_tmp.mp4 -ss $source_start -to $source_end -r 25 /videos/source.mp4
-    !rm /videos/source_tmp.mp4
