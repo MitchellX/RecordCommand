@@ -135,3 +135,6 @@ Taylor Swift videos:
     source_url = 'https://www.youtube.com/watch?v=JgkCFCOAn48'
     source_start = '00:00:08' #@param {type:"string"}
     source_end = '00:00:25' #@param {type:"string"}
+
+
+CUDA_VISIBLE_DEVICES=1
