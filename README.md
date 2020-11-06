@@ -136,5 +136,12 @@ Taylor Swift videos:
     source_start = '00:00:08' #@param {type:"string"}
     source_end = '00:00:25' #@param {type:"string"}
 
+# 在终端执行程序时指定GPU
 
-CUDA_VISIBLE_DEVICES=1
+    CUDA_VISIBLE_DEVICES=1 python xxx.py ...
+    
+    CUDA_VISIBLE_DEVICES=0    python  your_file.py  # 指定GPU集群中第一块GPU使用,其他的屏蔽掉
+
+    CUDA_VISIBLE_DEVICES=1           Only device 1 will be seen
+    CUDA_VISIBLE_DEVICES=0,1         Devices 0 and 1 will be visible
+
