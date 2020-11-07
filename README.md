@@ -2,8 +2,31 @@
 this repository aims to record some frequently-used command, including Linux and python commands.
 
 # Linux Common Command
-    mv A B      file/ folder rename文件重命名
-    ctrl + z    退出当前进程
+  
+  
+## 从YouTube下载视频
+    !pip3 install youtube-dl ffmpeg-python
+
+    source_url = 'https://www.youtube.com/watch?v=5-s3ANu4eMs' #@param {type:"string"}
+    
+    # (start, end) 剪取指定时长
+    source_start = '00:01:40' #@param {type:"string"}
+    source_end = '00:01:50' #@param {type:"string"}
+
+    !mkdir -p /content/data
+    !rm -dr /content/data/source*
+    !youtube-dl $source_url --merge-output-format mp4 -o /content/data/source_tmp.mp4
+    !ffmpeg -y -i /content/data/source_tmp.mp4 -ss $source_start -to $source_end -r 25 /content/data/source.mp4
+    !rm /content/data/source_tmp.mp4
+   
+Taylor Swift videos:
+
+    source_url = 'https://www.youtube.com/watch?v=JgkCFCOAn48'
+    source_start = '00:00:08' #@param {type:"string"}
+    source_end = '00:00:25' #@param {type:"string"}
+    
+    
+## 前后台切换命令
 https://blog.csdn.net/u011630575/article/details/48288663
 
     fg          回到上一个进程
