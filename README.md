@@ -183,4 +183,15 @@ windows上传文件夹到linux服务器：
 Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/details/51673229?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
     
     
+## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
+压缩
+
+    tar -czvf ***.tar.gz
+    tar -cjvf ***.tar.bz2
+解压缩
+
+    tar -xzvf ***.tar.gz
+    tar -xjvf ***.tar.bz2
+
+
     
