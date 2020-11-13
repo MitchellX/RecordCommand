@@ -176,3 +176,11 @@ Taylor Swift videos:
 ## 从Linux服务器下载文件到Windows：
     # scp root@10.1.22.5:/root/1.txt e:\scpdata\
     scp xiangmingcan@10.207.174.24:/export2/xiangmingcan/celeba.tar e:    # 下载到E盘
+windows上传文件夹到linux服务器：
+
+    scp -rp e:\scpdata root@10.1.22.5:/root
+    
+Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/details/51673229?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
+    
+    
+    
