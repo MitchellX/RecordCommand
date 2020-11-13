@@ -185,9 +185,11 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     
 ## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
 压缩
-
-    tar -czvf ***.tar.gz
-    tar -cjvf ***.tar.bz2
+    
+    tar -czvf *name*.tar.gz /source
+    tar -cjvf *name*.tar.bz2 /source
+    
+    tar -czvf 3000.tar.gz 3000/   #举例
 解压缩
 
     tar -xzvf ***.tar.gz
