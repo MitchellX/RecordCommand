@@ -172,3 +172,7 @@ Taylor Swift videos:
     CUDA_VISIBLE_DEVICES=1           Only device 1 will be seen
     CUDA_VISIBLE_DEVICES=0,1         Devices 0 and 1 will be visible
 
+
+## 从Linux服务器下载文件到Windows：
+    # scp root@10.1.22.5:/root/1.txt e:\scpdata\
+    scp xiangmingcan@10.207.174.24:/export2/xiangmingcan/celeba.tar e:    # 下载到E盘
