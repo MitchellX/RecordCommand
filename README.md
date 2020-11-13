@@ -193,5 +193,12 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     tar -xzvf ***.tar.gz
     tar -xjvf ***.tar.bz2
 
+## 正则表达式
+*  匹配 0 或多个字符
 
+?  匹配任意一个字符
+   
+    mv *.* ./1000/
+    mv 6???.* ./6000/
+    
     
