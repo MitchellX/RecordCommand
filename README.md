@@ -203,4 +203,6 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     mv *.* ./1000/
     mv 6???.* ./6000/
     
-    
+## pip install xxx 太慢
+    pip install xxx -i https://pypi.tuna.tsinghua.edu.cn/simple
+
