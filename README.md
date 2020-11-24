@@ -206,3 +206,10 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 ## pip install xxx 太慢
     pip install xxx -i https://pypi.tuna.tsinghua.edu.cn/simple
 
+
+## du查看目录大小，df查看磁盘使用情况。
+    df -lh
+    du -lh
+    
+
+
