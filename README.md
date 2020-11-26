@@ -203,6 +203,17 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 
     tar -xzvf ***.tar.gz
     tar -xjvf ***.tar.bz2
+参数解析
+
+    -c: compress建立压缩档案
+    -x：解压
+    -t：tex 查看内容
+    -v: view 查看过程
+    -f: force 参数-f是必须的。使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。
+    
+    -z：有gzip属性的
+    -j：有bz2属性的
+    
 
 ## 正则表达式
 *  匹配 0 或多个字符
