@@ -181,7 +181,16 @@ windows上传文件夹到linux服务器：
     scp -rp e:\scpdata root@10.1.22.5:/root
     
 Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/details/51673229?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
+
+### 远程到本地
+以admin的身份把IP地址为“192.168.219.125”，/home/admin/test目录下所有的东西都拷贝到本机/home/admin/目录下
     
+    scp -r 用户名@计算机IP或者计算机名称:目录名 本地路径
+    scp -r  admin@192.168.219.125:/home/admin/test     /home/admin/
+### 本地到远程
+    
+    scp -r 要传的本地目录名     用户名@计算机IP或名称:远程路径
+    scp -r /home/music/    root@ipAddress:/home/root/others/ 
     
 ## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
 压缩
