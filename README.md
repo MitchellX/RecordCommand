@@ -233,7 +233,8 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     
 ## screen 命令详解
     yum install -y screen	    安装screen工具。
-    screen	                  打开一个screen回话。
+    screen	                  打开一个screen会话
+    screen -S <name>          建立一个screen会话，名字是:name
     先按Ctrl+a，再按d	        退出screen会话。
     screen -ls	              查看打开的screen会话。
     screen -r 编号	          退出后再次登录某个会话。
