@@ -240,6 +240,13 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     screen -r 编号	          退出后再次登录某个会话。
     Ctrl+d或exit	             结束screen会话。
 
+## linux下修改python的默认版本：即python2->python3
+删除原有链接
 
+    rm /usr/bin/python 
+
+建立新链接
+
+    ln -s /usr/bin/python3.6这是你想要指向的版本号 /usr/bin/python
 
 
