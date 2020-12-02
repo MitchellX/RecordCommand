@@ -263,4 +263,10 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     
 basename是指去掉 .mp4后的base名词
 
+#如果文件夹不存在，创建文件夹
+
+    if [ ! -d "/myfolder" ]; then
+      mkdir /myfolder
+    fi
+
 
