@@ -250,3 +250,17 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     ln -s /usr/bin/python3.6这是你想要指向的版本号 /usr/bin/python
 
 
+# shell命令
+    for i in `ls templates/*.mp4`;do
+    name=`basename $i .mp4`
+    if [ ! -d templates/$name ];then
+    python image2video_fp.py templates/$i templates/$name
+    fi
+    python main.py $name
+    python image2video_fp.py results/${name}_sijiali results/${name}_sijiali.mp4 25
+    echo $i
+    done
+    
+basename是指去掉 .mp4后的base名词
+
+
