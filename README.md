@@ -193,6 +193,10 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     scp -r /home/music/    root@ipAddress:/home/root/others/ 
     
 ## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
+
+    # 不需要加密/或Windows下一步解压，就用这个
+    tar -cvf ***.tar /source
+    tar -xvf ***.tar
 压缩
     
     tar -czvf *name*.tar.gz /source
