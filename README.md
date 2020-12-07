@@ -275,4 +275,4 @@ basename是指去掉 .mp4后的base名词
       mkdir /myfolder
     fi
 
-
+## 去掉后缀了前面的路径都可以用basename
