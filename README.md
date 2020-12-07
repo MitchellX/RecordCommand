@@ -2,7 +2,7 @@
 this repository aims to record some frequently-used command, including Linux and python commands.
 
 # Linux Common Command
-  
+    cd - 返回上次的目录
   
 ## 从YouTube下载视频
     !pip3 install youtube-dl ffmpeg-python
