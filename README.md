@@ -275,4 +275,13 @@ basename是指去掉 .mp4后的base名词
       mkdir /myfolder
     fi
 
-## 去掉后缀了前面的路径都可以用basename
+## shell去掉后缀了前面的路径都可以用basename
+    username=$(basename $username) 去掉前置路径
+    username=$(basename $username .jpg) 增加去掉后缀
+
+
+## splitext去掉后缀，basename去掉前置路径，python
+    os.path.splitext()[0]
+    os.path.basename()
+    # 两个连用，只剩名词
+    target_name = os.path.splitext(os.path.basename(target_path))[0]
