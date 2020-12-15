@@ -285,3 +285,8 @@ basename是指去掉 .mp4后的base名词
     os.path.basename()
     # 两个连用，只剩名词
     target_name = os.path.splitext(os.path.basename(target_path))[0]
+    
+    
+## JD Jupyter
+    ssh 打开
+    sudo apt-get update
