@@ -290,3 +290,10 @@ basename是指去掉 .mp4后的base名词
 ## JD Jupyter
     ssh 打开
     sudo apt-get update
+    
+    
+## 生成文件夹树形目录
+
+windows下的CMD命令tree可以很方便的得到文件夹目录树
+
+    tree /f>list.txt
