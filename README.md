@@ -291,6 +291,24 @@ basename是指去掉 .mp4后的base名词
 
     ln -s /usr/bin/python3.6这是你想要指向的版本号 /usr/bin/python
     
+## 想更新最新版软件
+
+先备份jd的源，然后更新清华源：
+
+    cp sources.list sources.list2
+    vim sources.list
+    
+    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+    
+更新源千万不能加sudo，不然会失败的！！！
+    
+    apt-get update
+    完成之后，即可装最新的软件了
+    
+    
     
 ## 生成文件夹树形目录
 
