@@ -293,6 +293,8 @@ basename是指去掉 .mp4后的base名词
     
 ## 想更新最新版软件
 
+    /etc/apt/sources.list
+
 先备份jd的源，然后更新清华源：
 
     cp sources.list sources.list2
