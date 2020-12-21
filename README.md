@@ -246,15 +246,6 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     screen -r 编号	          退出后再次登录某个会话。
     Ctrl+d或exit	             结束screen会话。
 
-## linux下修改python的默认版本：即python2->python3
-删除原有链接
-
-    rm /usr/bin/python 
-
-建立新链接
-
-    ln -s /usr/bin/python3.6这是你想要指向的版本号 /usr/bin/python
-
 
 # shell命令
     for i in `ls templates/*.mp4`;do
@@ -287,9 +278,18 @@ basename是指去掉 .mp4后的base名词
     target_name = os.path.splitext(os.path.basename(target_path))[0]
     
     
-## JD Jupyter
+# JD Jupyter
     ssh 打开
     sudo apt-get update
+    
+### linux下修改python的默认版本：即python2->python3
+删除原有链接
+
+    rm /usr/bin/python 
+
+建立新链接
+
+    ln -s /usr/bin/python3.6这是你想要指向的版本号 /usr/bin/python
     
     
 ## 生成文件夹树形目录
