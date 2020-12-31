@@ -317,3 +317,9 @@ basename是指去掉 .mp4后的base名词
 windows下的CMD命令tree可以很方便的得到文件夹目录树
 
     tree /f>list.txt
+    
+    
+## glob.glob(*) 类似正则表达式一样的，找寻目录
+    a = glob.glob('*')
+    print(a)
+    :: ['Audio', 'batch_run.py', 'Data', 'Deep3DFaceReconstruction', 'pipeline.jpg', 'readme.md', 'render-to-video', 'requirements.txt', 'requirements_colab.txt', 'test.py']
